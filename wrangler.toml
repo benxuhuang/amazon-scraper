@@ -1,6 +1,6 @@
 name = "amazon-scraper"
 type = "webpack"
-account_id = ""
+account_id = "3103c02147d76f2805bd8c96dd53fd54"
 workers_dev = true
 route = ""
 zone_id = ""

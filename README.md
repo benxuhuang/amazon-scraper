@@ -27,14 +27,14 @@ https://amazon-scraper.tprojects.workers.dev/search/laptop
   "status": true,
   "total_result": 16,
   "query": "laptop",
-  "fetch_from": "https://www.amazon.in/s?k=laptop",
+  "fetch_from": "https://www.amazon.com/s?k=laptop",
   "result": [
     {
       "name": "ASUS VivoBook 15 (2020), 39.6 cm HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 10 Home/Transparent Silver/1.8 Kg), X515MA-BR002T",
       "image": "https://m.media-amazon.com/images/I/71S8U9VzLTL._SL1000_.jpg",
       "price": 24990,
       "original_price": 30990,
-      "product_link": "https://www.amazon.in/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3",
+      "product_link": "https://www.amazon.com/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3",
       "query_url": "https://amazon-scraper.dvishal485.workers.dev/product/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3"
     },
     ... more ...
@@ -61,7 +61,7 @@ https://amazon-scraper.tprojects.workers.dev/product/Lenovo-IdeaPad-15-6-inch-Pl
 {
   "status": true,
   "query": "ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3",
-  "fetch_from": "https://www.amazon.in/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3",
+  "fetch_from": "https://www.amazon.com/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3",
   "product_detail": {
     "name": "ASUS VivoBook 15 (2020), 39.6 cm HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 10 Home/Transparent Silver/1.8 Kg), X515MA-BR002T",
     "image": "https://m.media-amazon.com/images/I/71S8U9VzLTL._SL1500_.jpg",
@@ -81,7 +81,7 @@ https://amazon-scraper.tprojects.workers.dev/product/Lenovo-IdeaPad-15-6-inch-Pl
       "Operating System: Pre-loaded Windows 10 Home with lifetime validity",
       "Design & battery: Up to 19.9mm Thin | NanoEdge Bezels | Thin and Light Laptop | Laptop weight: 1.8 kg | 37WHrs, 2-cell Li-ion battery | Up to 6 hours battery life ;Note: Battery life depends on conditions of usage"
     ],
-    "product_link": "https://www.amazon.in/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3"
+    "product_link": "https://www.amazon.com/ASUS-VivoBook-Integrated-Transparent-X515MA-BR002T/dp/B08CKY5XX3/ref=sr_1_3"
   }
 }
 ```

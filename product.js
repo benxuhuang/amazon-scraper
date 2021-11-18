@@ -1,6 +1,6 @@
 const product = async (query) => {
 
-    const product_page = await (await fetch(`https://www.amazon.in/${query}`)).text()
+    const product_page = await (await fetch(`https://www.amazon.com/${query}`)).text()
 
     try {
         var features = []
@@ -80,7 +80,7 @@ const product = async (query) => {
             in_stock,
             rating_details,
             features,
-            product_link: `https://www.amazon.in/${query}`
+            product_link: `https://www.amazon.com/${query}`
         }
     } catch (err) {
         var product_detail = null
@@ -90,7 +90,7 @@ const product = async (query) => {
     return JSON.stringify({
         status: true,
         query,
-        fetch_from: `https://www.amazon.in/${query}`,
+        fetch_from: `https://www.amazon.com/${query}`,
         product_detail
     }, null, 2)
 }

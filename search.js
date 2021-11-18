@@ -1,14 +1,14 @@
 const search = async (query, host) => {
 
     const SearchQuery = query.replace(/%20/gi, '+')
-    const searchRes = await (await fetch(`https://www.amazon.in/s?k=${SearchQuery}`)).text()
+    const searchRes = await (await fetch(`https://www.amazon.com/s?k=${SearchQuery}`)).text()
 
     var all_product = searchRes.split('<div class="a-section aok-relative s-image-fixed-height">')
 
     var i, result = [];
     for (i = 1; i < all_product.length; i++) { /* (type 1) */
         try {
-            var product_link = 'https://www.amazon.in' + all_product[i].split('<a class="a-link-normal a-text-normal" target="_blank" href="')[1].split('"')[0].split('?')[0]
+            var product_link = 'https://www.amazon.com' + all_product[i].split('<a class="a-link-normal a-text-normal" target="_blank" href="')[1].split('"')[0].split('?')[0]
 
             if (!product_link.includes('/gp/slredirect/')) { /* Not including sponsered products */
                 result.push({
@@ -17,7 +17,7 @@ const search = async (query, host) => {
                     price: parseFloat(all_product[i].split('<span class="a-price" data-a-size="l" data-a-color="price"><span class="a-offscreen">')[1].split('</span>')[0].replace(/,/g, '').replace('₹', '').trim()),
                     original_price: parseFloat(all_product[i].split('<span class="a-price a-text-price" data-a-size="b" data-a-strike="true" data-a-color="secondary"><span class="a-offscreen">')[1].split('</span>')[0].replace(/,/g, '').replace('₹', '').trim()),
                     product_link,
-                    query_url: product_link.replace('www.amazon.in', host + '/product')
+                    query_url: product_link.replace('www.amazon.com', host + '/product')
                 })
             }
         } catch (err) { }
@@ -28,7 +28,7 @@ const search = async (query, host) => {
 
         for (i = 1; i < all_product_container.length; i++) {
             try {
-                var product_link = 'https://www.amazon.in' + all_product_container[i].split('<a class="a-link-normal s-no-outline" target="_blank" href="')[1].split('"')[0].split('?')[0]
+                var product_link = 'https://www.amazon.com' + all_product_container[i].split('<a class="a-link-normal s-no-outline" target="_blank" href="')[1].split('"')[0].split('?')[0]
                 if (!product_link.includes('/gp/slredirect/')) {
                     result.push({
                         name: (all_product_container[i].split('<span class="a-size-base-plus a-color-base a-text-normal">')[1].split('</span>')[0]).replace(/&#39;/gi, "'").replace(/&amp;/gi, "&").replace(/&quot;/gi, "'").replace(/&#x27;/gi, "'"),
@@ -36,7 +36,7 @@ const search = async (query, host) => {
                         price: parseFloat(all_product_container[i].split('<span class="a-price" data-a-size="l" data-a-color="price"><span class="a-offscreen">')[1].split('</span>')[0].replace(/,/g, '').replace('₹', '').trim()),
                         original_price: parseFloat(all_product_container[i].split('<span class="a-price a-text-price" data-a-size="b" data-a-strike="true" data-a-color="secondary"><span class="a-offscreen">')[1].split('</span>')[0].replace(/,/g, '').replace('₹', '').trim()),
                         product_link,
-                        query_url: product_link.replace('www.amazon.in', host + '/product')
+                        query_url: product_link.replace('www.amazon.com', host + '/product')
                     })
                 }
             } catch (err) { }
@@ -47,7 +47,7 @@ const search = async (query, host) => {
         status: true,
         total_result: result.length,
         query: SearchQuery,
-        fetch_from: `https://www.amazon.in/s?k=${SearchQuery}`,
+        fetch_from: `https://www.amazon.com/s?k=${SearchQuery}`,
         result
     }, null, 2)
 }
